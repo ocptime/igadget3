@@ -4,6 +4,8 @@
 // Import Bourbon
 @import "globals/bourbon/_bourbon.scss";
 
+@import "globals/_sprites";
+
 
 // File for global Uranium stylings
 @import "globals/_uranium.scss";
@@ -17,6 +19,8 @@
 
 // Import global base styles
 @import "globals/_base";
+
+@import "globals/_hide";
 
 // Header & Footer
 @import "sections/_header";

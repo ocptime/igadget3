@@ -4,3 +4,14 @@ $base-font-size: 13px;
 $base-line-height: 24px;
 @include establish-baseline();
 
+// colors
+$color1: #B03B01; // header color
+$color2: #075899; // link color
+
+$color5: $color2;
+$color6: #ccc;
+
+$font_family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+$font_size: 100%;
+$border2: 1px solid #ccc;
+

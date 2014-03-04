@@ -1,0 +1,50 @@
+// Site-wide styles go here
+// What shouldn't go here
+//   - global declarative classes, mixins, or variables, that goes in _lib.scss
+ 
+body {
+  font-family: $font_family;
+  font-size: $font_size;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+h2{
+  margin: 5px 0 10px;
+}
+p {
+  font-size: $font_size;
+}
+ 
+textarea, input[type="text"], input[type="password"], select {
+  @include border-radius(3px);
+  border: $border2;
+  padding: 8px;
+  vertical-align: middle;
+  margin: 0px 5px;
+}
+a {
+  text-decoration: none;
+  color: $color5;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+hr {
+  margin: 10px 0;
+  padding: 0;
+  background: $color6;
+  height: 1px;
+  border: 0;
+}
+
