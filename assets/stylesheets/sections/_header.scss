@@ -4,9 +4,9 @@
 
 
 #Header {
-  background: $color1;
+  //background: $color1;
   a {
-    color: $color2;
+    color: $color2; 
   }
 
   border-top: 1px solid black;
@@ -21,21 +21,62 @@
       margin: 0;
       padding: 10px;
       a {
-        font-size: 22px;
+        font-size: 18px;
         text-shadow: 0 -1px rgba(0,0,0,0.9);
         color: white;
+        font-weight:bold;
       }
     }
+    #TopMenu {
+		ul {
+			float:right;
+			margin-right:10px;
+			li {
+				display:inline-block;
+			}
+		}
+	}
   }
+
+  #Menu {
+	background: #fff;
+	padding-top:0px;
+	.Left {
+			#SideCategoryList,
+			#SideCategoryShopByPrice,
+			#SideShopByBrand {
+				@include _acc-style
+			}
+	}
+	.mw_bar1 {
+			&[data-ur-state="disabled"] {
+				> .mw_indicator {
+					@extend .sprites-plus;
+				}
+			}
+			&[data-ur-state="enabled"] {
+				> .mw_indicator {
+					@extend .sprites-minus;
+				}
+			}
+	}
+	.mw_arrow {
+		@include sprites-menu_go;
+		float: right;
+		margin-top:5px;
+	}
+}
 
   .mw_header_bottom {
     width: 100%;
     display: block;
+    padding:5px 0 5px 0;
     @include background(linear-gradient(top, #852201, #6a1b00));
     .mw_search {
       display: inline-block;
-      width: 75%;
+      width: 65%;
       position: relative;
+      margin:0 10px 0 10px;
       input[type='text']{
         border: 1px solid black;
         background-color: #f1f0f0;
@@ -51,11 +92,16 @@
         position: absolute;
         top: 0;
         right: -13px;
+        input {
+			width: 40px;
+			height: 33px;
+		}
       }
     }
     .mw_menu_btn {
       float: right;
       display: block;
+      margin-right:6px;
       &[data-ur-state="enabled"] span {
         @extend .sprites-menu-on;
       }

@@ -14,12 +14,20 @@ $(".//div[@id='Header']") {
 		attribute("display", "none")
 	}
 
+	# Move top menu into #Logo container
 	$("./div[@id='Logo']") {
-	  	# Move top menu into #Logo container
-	  	move_here("../../../div[@id='TopMenu']", "bottom") {
-	    # Remove unwanted top menu items from upper menu
-	    remove(".//li[not(contains(@class, 'CartLink') or contains(@class, 'First'))]")
-	  }
+		move_here("../../../div[@id='TopMenu']", "top") {
+			# Remove unwanted top menu items from upper menu
+			remove(".//li[not(contains(@class, 'CartLink') or contains(@class, 'First'))]")
+			$("./ul/li[@class='First']/a") {
+				text("")
+				insert("div", class: "sprites-user")
+			}
+			$("./ul/li[@class='CartLink']/a") {
+				text("")
+				insert("div", class: "sprites-cart")
+			}
+		}
 	}
 
 	# Insert HTML for bottom of header
@@ -52,10 +60,42 @@ $(".//div[@id='Header']") {
 	move_here("../div[@id='Menu']", "bottom") {
 	  attribute("data-ur-toggler-component", "content")
 	  # Move "Category List" element on bottom of #Menu element
-	  move_here("../../div[@id='Wrapper']/div[@class='Left']/div[@id='SideCategoryList']", "bottom")
+	  move_here("../../div[@id='Wrapper']/div[@class='Left']", "bottom")
 	  $$("li") {
 	    add_class("mw_bar2")
 	  }
+	}
+
+	$("//br") {
+		remove()
+	}
+
+	$("./div[@id='Menu']/ul") {
+		remove();
+	}
+
+	$(".//div[@id='LayoutColumn1']") {
+		$("./div[@id='SideCategoryList']/div") {
+			unwrap()
+		}
+
+		$("./div[@id='SideShopByBrand' or @id='SideCategoryShopByPrice' or @id='SideCategoryList']") {
+			attribute("data-ur-set","toggler")
+			$("./h2") {
+				add_class("mw_bar1")
+				attribute("data-ur-toggler-component", "button")
+				insert("div", class: "mw_indicator")
+			}
+			$("./div") {
+				attribute("data-ur-toggler-component", "content")
+				$("./ul/li/a") {
+					inner_wrap("div", class: "mw_li-a-inner-wrap") {
+						insert("div", class: "mw_arrow")
+					}
+				}
+			}
+		}
+
 	}
 
 
