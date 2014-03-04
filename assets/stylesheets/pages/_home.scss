@@ -5,18 +5,31 @@
 //}
 
 .mw_home {
-    .Left{
-    display: none;
-  }
-  
-  .Clear{
-    display: none;
-  }
 
-  .mw_banner {
-    padding: 5px 10px;
-    text-align: center;
-    color: white;
-      background: #C92500;
-  }
+	#Wrapper {
+		text-align: center;
+	}
+	._page-title {
+		background: $color3;
+		margin: 10px;
+		padding: 5px;
+		border-radius: 10px;
+	}
+	._item-wrap {
+		width:110px;
+		display:inline-block;
+		margin:15px;
+		font-size:11px;
+		text-align:left;
+		line-height:11px;
+		overflow:hidden;
+		.sprites-AddCartButton {
+			text-align:center;
+			margin-top:5px;
+		}
+	}
+	._cart-button {
+		@include _m-cart-button;
+	}
+
 }

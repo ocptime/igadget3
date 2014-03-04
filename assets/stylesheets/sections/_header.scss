@@ -47,7 +47,7 @@
 			#SideShopByBrand {
 				@include _acc-style
 			}
-	}
+		}
 	.mw_bar1 {
 			&[data-ur-state="disabled"] {
 				> .mw_indicator {
@@ -65,7 +65,7 @@
 		float: right;
 		margin-top:5px;
 	}
-}
+  }
 
   .mw_header_bottom {
     width: 100%;
