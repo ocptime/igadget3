@@ -1,16 +1,114 @@
 .mw_product {
-    .Left{
-    display: none;
-  }
-  
-  .Clear{
-    display: none;
-  }
 
-  .mw_banner {
-    padding: 5px 10px;
-    text-align: center;
-    color: white;
-      background: #C92500;
+    #Wrapper {
+      text-align: center;
+
+      ._page-title {
+        margin: 10px;
+        padding: 5px;
+      }
+
+      .AddThisButtonBox, .Clear, .zoomWrapper, .ZoomPreload {
+        display: none;
+      }
+
+      h3 {
+        font-size:16px;
+        font-weight:bold;
+        margin-bottom:5px;
+      }
+
+      .DetailRow div {
+        display:inline;
+        &.Label {
+          font-weight:bold;
+        }
+      }
+
+      .productAttributeList {
+          .productAttributeRow {
+            margin:10px 0 0 0;
+            .productAttributeLabel {
+              font-weight:bold;
+              .required {
+                color:red;
+              }
+            }
+          }
+      }
+
+      ._cart-button {
+        @include _m-cart-button;
+      }
+      
+      .ProductMain {
+        margin:9px;
+        font-size:11px;
+        text-align:left;
+        line-height:11px;
+        overflow:hidden;
+        background:$color8;
+        border: 1px solid $color9;
+        padding:10px;
+        ._cart-button {
+            margin-top:10px;
+        }
+        .DetailRow {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
+
+      .ProductDescription,
+      #ProductByCategory,
+      #ProductReviews,
+      #SimilarProductsByCustomerViews {
+        margin: 9px;
+        line-height: 16px;
+      }
+      #ProductReviews {
+        h4 {
+            font-weight:bold;
+        }
+        .Meta {
+          font-style: italic;
+        }
+      }
+
+      ._item-wrap {
+        margin:9px;
+        font-size:11px;
+        text-align:left;
+        line-height:11px;
+        overflow:hidden;
+        background:$color8;
+        border: 1px solid $color9;
+        padding:10px;
+        > div {
+          float:left;
+          height:120px;
+        }
+        ._item-right {
+          margin-left: 10px;
+          width:130px;
+          height:120px;
+          position:relative;
+          .ProductPriceRating {
+            color:red;
+          }
+
+          .ProductActionAdd {
+            position:absolute;
+            bottom:0 !important;
+            border:3px solid gold;
+            width:120px;
+            ._cart-button {
+              @include _m-cart-button;
+            }
+          }
+        }
+      }
+
+
   }
 }

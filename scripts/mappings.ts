@@ -25,6 +25,10 @@ match($status) {
       with(/shop-/) {
         log("--> Importing pages/category.ts in mappings.ts")
         @import pages/category.ts
+      } 
+      with(/-product/) {
+        log("--> Importing pages/product.ts in mappings.ts")
+        @import pages/product.ts
       }
       else() {
         log("--> No page match in mappings.ts")

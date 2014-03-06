@@ -39,32 +39,32 @@
   }
 
   #Menu {
-	background: #fff;
-	padding-top:0px;
-	.Left {
-			#SideCategoryList,
-			#SideCategoryShopByPrice,
-			#SideShopByBrand {
-				@include _acc-style
+		background: #fff;
+		padding-top:0px;
+		.Left {
+				#SideCategoryList,
+				#SideCategoryShopByPrice,
+				#SideShopByBrand {
+					@include _acc-style
+				}
 			}
+		.mw_bar1 {
+				&[data-ur-state="disabled"] {
+					> .mw_indicator {
+						@extend .sprites-plus;
+					}
+				}
+				&[data-ur-state="enabled"] {
+					> .mw_indicator {
+						@extend .sprites-minus;
+					}
+				}
 		}
-	.mw_bar1 {
-			&[data-ur-state="disabled"] {
-				> .mw_indicator {
-					@extend .sprites-plus;
-				}
-			}
-			&[data-ur-state="enabled"] {
-				> .mw_indicator {
-					@extend .sprites-minus;
-				}
-			}
-	}
-	.mw_arrow {
-		@include sprites-menu_go;
-		float: right;
-		margin-top:5px;
-	}
+		.mw_arrow {
+			@include sprites-menu_go;
+			float: right;
+			margin-top:5px;
+		}
   }
 
   .mw_header_bottom {

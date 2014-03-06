@@ -15,6 +15,9 @@ $color6: #ccc;
 
 $color7: lighten($color1,50%);	
 
+$color8: #eee;	// Grey box on category/product page
+$color9: darken($color8,5%);
+
 $font_family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 $font_size: 100%;
 $border2: 1px solid #ccc;

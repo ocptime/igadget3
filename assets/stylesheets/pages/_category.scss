@@ -4,14 +4,14 @@
 		text-align: center;
 
 		.SortBox {
-			@include background(linear-gradient(top, #852201, #6a1b00));
-			color: #fff;
-			margin: 10px 10px 0 10px;
-			padding:10px;
-			border-radius: 8px;
-			border:1px solid #6a1b00;
-			font-weight: bold;
-			font-size:16px;
+				@include background(linear-gradient(top, #852201, #6a1b00));
+				color: #fff;
+				margin: 10px 10px 0 10px;
+				padding:10px;
+				border-radius: 8px;
+				border:1px solid #6a1b00;
+				font-weight: bold;
+				font-size:16px;
 		}
 	
 		.QuickViewBtn, .ProductCompareButton, .CompareButton {
