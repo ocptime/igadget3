@@ -32,4 +32,13 @@
 		@include _m-cart-button;
 	}
 
+
+
+	div[data-ur-carousel-component="scroll_container"] > * {
+	   display: inline-block;
+	   float: left;
+	}
+
+
+
 }

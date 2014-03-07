@@ -2,7 +2,19 @@ $("./body") {
 	//add_class("_product")
 	add_class("mw_product")
 
+	$(".//div[@id='LayoutColumn1']") {
+		$("./div[@id='SideNewProducts']") {
+			remove() 
+		}
+	}
+
 	$(".//div[@id='LayoutColumn2']") {
+
+		$("./div[@id='ProductReviews']/a") {
+			remove() 
+		}
+
+
 		$("./div[@id='ProductDetails']/div[@class='BlockContent']") {
 			$("./h2") {
 				add_class("_page-title")
@@ -43,14 +55,34 @@ $("./body") {
 				}
 			}
 
-			
-
-
 		}
+
+		$(".//ul[@class='ProductList']") {
+			name("div")
+			$("./li") {
+				name("div")
+				attribute("class", "_item-wrap")
+				attribute("style","")
+				$("./div[@class='ProductCompareButton']") {
+					remove()
+				}
+				insert_top("div", class: "_item-left") {
+					move_here("../div[@class='ProductImage']")
+				}
+				insert_bottom("div", class: "_item-right") {
+					move_here("../div[@class='ProductDetails' or @class='ProductPriceRating' or @class='ProductActionAdd']")
+					$("./div[@class='ProductActionAdd']") {
+						$('./a') {
+							inner_wrap("div", class: "_cart-button")
+						}
+					}
+					$("./div[@class='ProductPriceRating']/span") {
+						name("div")
+					}
+				}	
+			}
+		}
+
 	}
-
-
-
-
 
 }

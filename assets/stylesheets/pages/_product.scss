@@ -40,7 +40,11 @@
       ._cart-button {
         @include _m-cart-button;
       }
-      
+
+      .ProductThumb {
+        height:260px !important;
+      }
+    
       .ProductMain {
         margin:9px;
         font-size:11px;
@@ -65,6 +69,12 @@
       #SimilarProductsByCustomerViews {
         margin: 9px;
         line-height: 16px;
+        text-align: left;
+        font-size:12px;
+        color: #333;
+        h3 {  
+            font-size:14px;
+        }
       }
       #ProductReviews {
         h4 {
@@ -76,14 +86,14 @@
       }
 
       ._item-wrap {
-        margin:9px;
+        margin:5px;
         font-size:11px;
         text-align:left;
         line-height:11px;
         overflow:hidden;
         background:$color8;
         border: 1px solid $color9;
-        padding:10px;
+        padding:5px;
         > div {
           float:left;
           height:120px;
@@ -100,7 +110,6 @@
           .ProductActionAdd {
             position:absolute;
             bottom:0 !important;
-            border:3px solid gold;
             width:120px;
             ._cart-button {
               @include _m-cart-button;

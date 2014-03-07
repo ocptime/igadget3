@@ -32,7 +32,10 @@ $("./body") {
       $("./div[@class='mw_moovweb']") {
         insert("span", class: "mw_powered", "powered by:")
         insert("div", class: "sprites-moovweb")
-      }     
+      }
+
+      $txt = fetch(".")
+      log($txt)     
       
       # Remove unwanded elements
       $("./*[not(self::div)]") {
